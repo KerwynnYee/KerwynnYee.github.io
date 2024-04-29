@@ -1,0 +1,164 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #39c7406e;
+  }
+  
+  /* Add a black background color to the top navigation */
+.topnav {
+  background-color: #1dce1d;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+  /* .sidenav {
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: #34cf15;
+    overflow-x: hidden;
+    padding: 8px 0;
+    height: 100%;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #ffffff;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #000102;
+  } */
+  
+  .main {
+    /*margin-left: 140px;  Same width as the sidebar + left position in px */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    /* background: #39c7406e; */
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    border-radius: 25px;
+  }
+  
+.intro { 
+    text-align: justify;
+    text-justify: inter-word;
+    background-color: #ffffff;
+    border-radius: 25px;
+    border-color: #ffffff;
+    padding: 40px;
+    margin-left: 160px;
+    margin-right: 160px;
+    margin-top: 40px;
+}
+  /* @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  } */
+
+.pHead {
+  font-size: 30px;
+  font-weight: bold;
+}
+  .row {
+    display: flex;
+    margin-bottom: 40px;
+    margin-left: 160px;
+    margin-right: 160px;
+    /* margin-left: 140px; Same width as the sidebar + left position in px */
+    font-size: 18px; /* Increased text to enable scrolling */
+    padding: 20px 10px;
+    border-radius: 25px;
+    /* border: 4px solid #000000; */
+    background-color: #ffffff;
+    
+  }
+  
+  .column-justify p {
+    margin: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 20px 20px;
+    flex: 50%
+  }
+
+  .column-justify h2{
+    padding-left: 40px;
+  }
+  .column h3, p {
+    flex: 50%;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+  }
+
+  .MisVis {
+    display: flex;
+    height: 500px;
+    max-width: 750px;
+    border-radius: 25px;
+    margin: 20px 20px;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+  }
+
+  .maincenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 25px;
+  }
+
+  .services > p {
+    text-align: center;
+  }
+
+  .contact {
+    display: flex;
+    margin-left: 160px;
+    font-size: 12px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+
+  .contact > p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
