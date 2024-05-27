@@ -1,6 +1,7 @@
 body {
     font-family: "Lato", sans-serif;
     background-color: #39c7406e;
+    font-size: 1vw;
   }
   
   /* Add a black background color to the top navigation */
@@ -60,7 +61,7 @@ body {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     text-align: center;
     /* background: #39c7406e; */
     color: rgb(0, 0, 0);
@@ -68,16 +69,72 @@ body {
     border-radius: 25px;
   }
   
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    overflow: hidden;
+    padding: 40px 40px;
+    border-radius: 25px;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    max-width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+  
+  .logos-slide {
+    display: inline-block;
+    animation: 30s slide infinite linear;
+  }
+  
+  .logos-slide img {
+    max-height: 200px;
+    margin: 0 40px;
+  }
+
 .intro { 
-    text-align: justify;
-    text-justify: inter-word;
     background-color: #ffffff;
     border-radius: 25px;
     border-color: #ffffff;
     padding: 40px;
-    margin-left: 160px;
-    margin-right: 160px;
+    margin-left: 120px;
+    margin-right: 120px;
     margin-top: 40px;
+}
+
+.intro p {
+    text-align: justify;
+    text-justify: inter-word;
+    animation: fadeIn 3s;
 }
   /* @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -85,7 +142,7 @@ body {
   } */
 
 .pHead {
-  font-size: 30px;
+  font-size: 2vw;
   font-weight: bold;
 }
   .row {
@@ -94,21 +151,27 @@ body {
     margin-left: 160px;
     margin-right: 160px;
     /* margin-left: 140px; Same width as the sidebar + left position in px */
-    font-size: 18px; /* Increased text to enable scrolling */
+    font-size: 1vw; /* Increased text to enable scrolling */
     padding: 20px 10px;
     border-radius: 25px;
     /* border: 4px solid #000000; */
     background-color: #ffffff;
     
   }
-  
+
   .column-justify p {
-    margin: 20px;
+    margin: 20px 20px;
     text-align: justify;
     text-justify: inter-word;
     padding: 20px 20px;
-    flex: 50%
+    flex: 50%;
+    animation: fadeIn 5s;
   }
+
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+   }
 
   .column-justify h2{
     padding-left: 40px;
@@ -123,19 +186,26 @@ body {
     
   }
 
-  .MisVis {
-    display: flex;
-    height: 500px;
-    max-width: 750px;
-    border-radius: 25px;
-    margin: 20px 20px;
+  .column-justify {
+    padding: 20px;
+    flex: 50%;
   }
 
-  .center {
+  .MisVis {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .centerimg {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: auto;
+    width: 50%;
+    max-width: 160px;
     height: auto;
   }
 
@@ -143,8 +213,9 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    max-width: 50%;
     border-radius: 25px;
+    animation: fadeIn 3s;
   }
 
   .services > p {
@@ -154,7 +225,7 @@ body {
   .contact {
     display: flex;
     margin-left: 160px;
-    font-size: 12px; /* Increased text to enable scrolling */
+    font-size: 0.8vw; /* Increased text to enable scrolling */
     padding: 0px 10px;
   }
 
